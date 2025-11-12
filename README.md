@@ -1,1 +1,1 @@
-# CosolaptrinhC-
+# Minasan, konichiwa ♪(´▽｀) 
