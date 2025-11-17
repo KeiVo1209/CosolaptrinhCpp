@@ -37,7 +37,8 @@ int tuantulc(int a[], int n, int x) {
     }
     return -1;
 }
-void sapxep(int a[], int n) {
+
+void bubblesort(int a[], int n) {
     int t = 0;
     For(i, 0, n) {
         for (int j = n - 1; j > i; j--) {
@@ -49,6 +50,16 @@ void sapxep(int a[], int n) {
         }
     }
 }
+int Binarysearch(int a[], int n, int x) {
+    int dau = 0, cuoi = n - 1, giua;
+    while (dau != cuoi) {
+        giua = (dau + cuoi) / 2;
+        if (a[giua] == x) return giua;
+        else if (a[giua] < x) cuoi = giua - 1;
+        else dau = giua + 1;
+    }
+    return -1;
+}
 int main()
 {
     int a[Max],n=0;
@@ -58,12 +69,12 @@ int main()
     } while (n <= 0);
     nhap(a,n);
     xuat(a,n);
-    sapxep(a,n);
+    bubblesort(a,n);
     xuat(a, n);
-    //int x;
-    //cout << "\nNhap so can tim: ";
-    //cin >> x;
-    //if (tuantulc(a, n, x) == -1) cout << "Khong co x can tim trong day";
+    int x;
+    cout << "\nNhap so can tim: ";
+    cin >> x;
+    if (tuantulc(a, n, x) == -1) cout << "Khong co x can tim trong day";
     //else cout << "Vi tri so " << x << " trong day la " << tuantulc(a, n, x);
 }
 
