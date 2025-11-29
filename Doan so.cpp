@@ -30,6 +30,6 @@ int main()
     da += V(m2, size(m2), out);
     da += V(m3, size(m3), out);
     da += V(m4, size(m4), out);
-    cout << "So ban chon la"<< da;
+    cout << "So ban chon la "<< da;
 }
 
